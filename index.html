@@ -1,0 +1,132 @@
+<!doctype html>
+<!--
+  NeuroGraph Web UI
+  Main browser entry point for the interactive scientific knowledge graph.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeuroGraph</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div>
+          <h1>NeuroGraph</h1>
+          <p>Scientific connectome explorer</p>
+        </div>
+      </div>
+
+      <label class="search-box">
+        <span>Search</span>
+        <input id="searchInput" type="search" placeholder="retinal ganglion cells, fear, Parkinson">
+      </label>
+
+      <div class="metric-grid">
+        <div class="metric">
+          <span id="nodeCount">0</span>
+          <small>Nodes</small>
+        </div>
+        <div class="metric">
+          <span id="edgeCount">0</span>
+          <small>Edges</small>
+        </div>
+        <div class="metric">
+          <span id="paperCount">0</span>
+          <small>Papers</small>
+        </div>
+        <div class="metric alert">
+          <span id="conflictCount">0</span>
+          <small>Conflicts</small>
+        </div>
+      </div>
+
+      <section class="control-section">
+        <div class="section-title">Relationship Type</div>
+        <div id="typeFilters" class="chip-list"></div>
+      </section>
+
+      <section class="control-section">
+        <div class="section-title">Minimum Confidence</div>
+        <div class="slider-row">
+          <input id="confidenceSlider" type="range" min="0" max="100" value="0">
+          <output id="confidenceValue">0%</output>
+        </div>
+      </section>
+
+      <section class="control-section">
+        <div class="section-title">Time Window</div>
+        <div class="slider-row">
+          <input id="yearSlider" type="range" min="2017" max="2023" value="2023">
+          <output id="yearValue">2023</output>
+        </div>
+      </section>
+
+      <div class="legend">
+        <div><i class="dot excitatory"></i>Excitatory</div>
+        <div><i class="dot inhibitory"></i>Inhibitory</div>
+        <div><i class="dot modulatory"></i>Modulatory</div>
+        <div><i class="dot unknown"></i>Unknown</div>
+        <div><i class="line conflict"></i>Conflicting evidence</div>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Living literature graph</p>
+          <h2 id="viewTitle">All extracted circuitry</h2>
+        </div>
+        <div class="toolbar" role="toolbar" aria-label="Graph actions">
+          <button id="fitButton" type="button" title="Fit graph">Fit</button>
+          <button id="resetButton" type="button" title="Reset filters">Reset</button>
+          <button id="exportButton" type="button" title="Download graph JSON">Export</button>
+        </div>
+      </header>
+
+      <section class="graph-stage" aria-label="Interactive knowledge graph">
+        <canvas id="brainCanvas" aria-label="3D NeuroGraph brain map"></canvas>
+        <div id="emptyState" class="empty-state" hidden>
+          <strong>No matching evidence</strong>
+          <span>Adjust search, confidence, relationship, or year filters.</span>
+        </div>
+      </section>
+    </main>
+
+    <aside class="details-panel">
+      <section class="detail-card selected-card">
+        <p class="eyebrow">Selected Edge</p>
+        <h2 id="detailTitle">Retinal Ganglion Cells -> LGN</h2>
+        <div id="detailMeta" class="detail-meta"></div>
+        <p id="detailSummary" class="detail-summary"></p>
+      </section>
+
+      <section class="detail-card">
+        <div class="panel-heading">
+          <h3>Evidence</h3>
+          <span id="evidenceCount">0 items</span>
+        </div>
+        <div id="evidenceList" class="evidence-list"></div>
+      </section>
+
+      <section class="detail-card">
+        <div class="panel-heading">
+          <h3>High-confidence paths</h3>
+          <span>Auto ranked</span>
+        </div>
+        <div id="pathList" class="path-list"></div>
+      </section>
+    </aside>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

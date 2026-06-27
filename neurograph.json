@@ -1,0 +1,428 @@
+{
+  "nodes": [
+    {
+      "id": "Amygdala",
+      "label": "Amygdala",
+      "kind": "brain_region"
+    },
+    {
+      "id": "Dorsolateral Striatum",
+      "label": "Dorsolateral Striatum",
+      "kind": "brain_region"
+    },
+    {
+      "id": "Hippocampus",
+      "label": "Hippocampus",
+      "kind": "brain_region"
+    },
+    {
+      "id": "LGN",
+      "label": "LGN",
+      "kind": "brain_region"
+    },
+    {
+      "id": "Layer V Pyramidal Neurons",
+      "label": "Layer V Pyramidal Neurons",
+      "kind": "cell_type"
+    },
+    {
+      "id": "Optic Nerve",
+      "label": "Optic Nerve",
+      "kind": "brain_region"
+    },
+    {
+      "id": "Parkinson's Disease",
+      "label": "Parkinson's Disease",
+      "kind": "disease"
+    },
+    {
+      "id": "Prefrontal Cortex",
+      "label": "Prefrontal Cortex",
+      "kind": "brain_region"
+    },
+    {
+      "id": "Primary Visual Cortex",
+      "label": "Primary Visual Cortex",
+      "kind": "brain_region"
+    },
+    {
+      "id": "Retina",
+      "label": "Retina",
+      "kind": "brain_region"
+    },
+    {
+      "id": "Retinal Ganglion Cells",
+      "label": "Retinal Ganglion Cells",
+      "kind": "brain_region"
+    },
+    {
+      "id": "SNc",
+      "label": "SNc",
+      "kind": "brain_region"
+    },
+    {
+      "id": "Superior Colliculus",
+      "label": "Superior Colliculus",
+      "kind": "brain_region"
+    },
+    {
+      "id": "VTA",
+      "label": "VTA",
+      "kind": "brain_region"
+    }
+  ],
+  "edges": [
+    {
+      "source": "Amygdala",
+      "target": "Hippocampus",
+      "relation": "Projects To",
+      "connection_type": "Excitatory",
+      "confidence": 43.32,
+      "support_count": 1,
+      "contradiction_count": 1,
+      "evidence": [
+        {
+          "polarity": "support",
+          "sentence": "Anterograde tracing revealed that the basolateral amygdala projects glutamatergic axons to the ventral hippocampus during fear memory retrieval.",
+          "method": "Anterograde Viral Tracing",
+          "species": "Mouse",
+          "figure": null,
+          "paper": {
+            "doi": "10.1000/neurograph.2017.009",
+            "title": "Amygdala-hippocampal projections during fear memory retrieval",
+            "authors": [
+              "Wang",
+              "Okafor"
+            ],
+            "year": 2017,
+            "journal": "Nature Neuroscience",
+            "keywords": [
+              "fear",
+              "amygdala",
+              "hippocampus"
+            ]
+          }
+        },
+        {
+          "polarity": "contradict",
+          "sentence": "In diffusion tensor imaging from humans, we did not observe a direct amygdala projection to the hippocampus.",
+          "method": "DTI",
+          "species": "Human",
+          "figure": null,
+          "paper": {
+            "doi": "10.1000/neurograph.2022.031",
+            "title": "Cross-species variability in amygdala hippocampal tracing",
+            "authors": [
+              "Miller",
+              "Chen"
+            ],
+            "year": 2022,
+            "journal": "Brain Structure and Function",
+            "keywords": [
+              "amygdala",
+              "hippocampus",
+              "conflict"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source": "Hippocampus",
+      "target": "Prefrontal Cortex",
+      "relation": "Activates",
+      "connection_type": "Unknown",
+      "confidence": 56.52,
+      "support_count": 1,
+      "contradiction_count": 0,
+      "evidence": [
+        {
+          "polarity": "support",
+          "sentence": "Optogenetics showed that the hippocampus activates medial prefrontal cortex.",
+          "method": "Optogenetics",
+          "species": "Mouse",
+          "figure": null,
+          "paper": {
+            "doi": "10.1000/neurograph.2017.009",
+            "title": "Amygdala-hippocampal projections during fear memory retrieval",
+            "authors": [
+              "Wang",
+              "Okafor"
+            ],
+            "year": 2017,
+            "journal": "Nature Neuroscience",
+            "keywords": [
+              "fear",
+              "amygdala",
+              "hippocampus"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source": "LGN",
+      "target": "Primary Visual Cortex",
+      "relation": "Activates",
+      "connection_type": "Excitatory",
+      "confidence": 56.52,
+      "support_count": 1,
+      "contradiction_count": 0,
+      "evidence": [
+        {
+          "polarity": "support",
+          "sentence": "Optogenetics and patch clamp recordings showed that the LGN activates primary visual cortex through excitatory glutamatergic synapses.",
+          "method": "Optogenetics",
+          "species": "Mouse",
+          "figure": null,
+          "paper": {
+            "doi": "10.1000/neurograph.2021.014",
+            "title": "Parallel visual streams from thalamus to cortex",
+            "authors": [
+              "Garcia",
+              "Stone"
+            ],
+            "year": 2021,
+            "journal": "Neuron",
+            "keywords": [
+              "LGN",
+              "visual cortex",
+              "optogenetics"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source": "Layer V Pyramidal Neurons",
+      "target": "Dorsolateral Striatum",
+      "relation": "Projects To",
+      "connection_type": "Excitatory",
+      "confidence": 58.32,
+      "support_count": 1,
+      "contradiction_count": 0,
+      "evidence": [
+        {
+          "polarity": "support",
+          "sentence": "Using anterograde viral tracing in adult C57BL/6 mice, we found strong excitatory projections from layer V pyramidal neurons of the primary motor cortex to the dorsolateral striatum.",
+          "method": "Anterograde Viral Tracing",
+          "species": "Mouse",
+          "figure": null,
+          "paper": {
+            "doi": "10.1000/neurograph.2019.022",
+            "title": "Corticostriatal projections from layer V neurons",
+            "authors": [
+              "Ahmed",
+              "Rosen"
+            ],
+            "year": 2019,
+            "journal": "Science",
+            "keywords": [
+              "motor cortex",
+              "striatum",
+              "corticostriatal"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source": "Optic Nerve",
+      "target": "Retina",
+      "relation": "Connected By",
+      "connection_type": "Unknown",
+      "confidence": 44.82,
+      "support_count": 1,
+      "contradiction_count": 0,
+      "evidence": [
+        {
+          "polarity": "support",
+          "sentence": "The optic nerve is connected to the retina and carries retinal ganglion cell axons.",
+          "method": null,
+          "species": "Mouse",
+          "figure": null,
+          "paper": {
+            "doi": "10.1000/neurograph.2021.014",
+            "title": "Parallel visual streams from thalamus to cortex",
+            "authors": [
+              "Garcia",
+              "Stone"
+            ],
+            "year": 2021,
+            "journal": "Neuron",
+            "keywords": [
+              "LGN",
+              "visual cortex",
+              "optogenetics"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source": "Prefrontal Cortex",
+      "target": "Amygdala",
+      "relation": "Inhibits",
+      "connection_type": "Inhibitory",
+      "confidence": 55.62,
+      "support_count": 1,
+      "contradiction_count": 0,
+      "evidence": [
+        {
+          "polarity": "support",
+          "sentence": "Patch clamp experiments in rats showed that prefrontal cortex inhibits amygdala output through GABAergic interneurons.",
+          "method": "Patch Clamp",
+          "species": "Rat",
+          "figure": null,
+          "paper": {
+            "doi": "10.1000/neurograph.2020.003",
+            "title": "Prefrontal control of amygdala output",
+            "authors": [
+              "Singh",
+              "Levy"
+            ],
+            "year": 2020,
+            "journal": "eLife",
+            "keywords": [
+              "fear",
+              "PFC",
+              "amygdala"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source": "Retinal Ganglion Cells",
+      "target": "LGN",
+      "relation": "Projects To",
+      "connection_type": "Excitatory",
+      "confidence": 58.32,
+      "support_count": 1,
+      "contradiction_count": 0,
+      "evidence": [
+        {
+          "polarity": "support",
+          "sentence": "Using anterograde viral tracing in adult C57BL/6 mice, we found strong glutamatergic projections from retinal ganglion cells to the LGN in Figure 2A.",
+          "method": "Anterograde Viral Tracing",
+          "species": "Mouse",
+          "figure": "Figure 2A",
+          "paper": {
+            "doi": "10.1000/neurograph.2018.001",
+            "title": "Anterograde mapping of retinal output pathways",
+            "authors": [
+              "Kim",
+              "Patel"
+            ],
+            "year": 2018,
+            "journal": "Journal of Neuroscience",
+            "keywords": [
+              "retina",
+              "visual system",
+              "tracing"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source": "Retinal Ganglion Cells",
+      "target": "Superior Colliculus",
+      "relation": "Projects To",
+      "connection_type": "Excitatory",
+      "confidence": 44.82,
+      "support_count": 1,
+      "contradiction_count": 0,
+      "evidence": [
+        {
+          "polarity": "support",
+          "sentence": "Retinal ganglion cells also project excitatory axons to the superior colliculus.",
+          "method": null,
+          "species": "Mouse",
+          "figure": null,
+          "paper": {
+            "doi": "10.1000/neurograph.2018.001",
+            "title": "Anterograde mapping of retinal output pathways",
+            "authors": [
+              "Kim",
+              "Patel"
+            ],
+            "year": 2018,
+            "journal": "Journal of Neuroscience",
+            "keywords": [
+              "retina",
+              "visual system",
+              "tracing"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source": "SNc",
+      "target": "Parkinson's Disease",
+      "relation": "Damaged In",
+      "connection_type": "Modulatory",
+      "confidence": 44.82,
+      "support_count": 1,
+      "contradiction_count": 0,
+      "evidence": [
+        {
+          "polarity": "support",
+          "sentence": "Dopaminergic neurons in the SNc are damaged in Parkinson's disease.",
+          "method": null,
+          "species": "Human",
+          "figure": null,
+          "paper": {
+            "doi": "10.1000/neurograph.2023.018",
+            "title": "Dopaminergic vulnerability in Parkinsonian circuits",
+            "authors": [
+              "Nguyen",
+              "Alvarez"
+            ],
+            "year": 2023,
+            "journal": "Cell Reports",
+            "keywords": [
+              "Parkinson",
+              "dopamine",
+              "basal ganglia"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source": "VTA",
+      "target": "Prefrontal Cortex",
+      "relation": "Projects To",
+      "connection_type": "Modulatory",
+      "confidence": 44.82,
+      "support_count": 1,
+      "contradiction_count": 0,
+      "evidence": [
+        {
+          "polarity": "support",
+          "sentence": "The VTA projects dopamine-modulated axons to prefrontal cortex.",
+          "method": null,
+          "species": "Human",
+          "figure": null,
+          "paper": {
+            "doi": "10.1000/neurograph.2023.018",
+            "title": "Dopaminergic vulnerability in Parkinsonian circuits",
+            "authors": [
+              "Nguyen",
+              "Alvarez"
+            ],
+            "year": 2023,
+            "journal": "Cell Reports",
+            "keywords": [
+              "Parkinson",
+              "dopamine",
+              "basal ganglia"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
