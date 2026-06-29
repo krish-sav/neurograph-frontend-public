@@ -3,7 +3,7 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "env": {
-    "VITE_API_URL": "@vite-api-url"
+    "VITE_API_URL": "https://neurograph-backend.vercel.app"
   },
   "rewrites": [
     {
